@@ -1,0 +1,25 @@
+public class SaiGani {
+public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://ttcareers.taleo.net/careersection/iam/accessmanagement/login.jsf?lang=en&redirectionURI=https%3A%2F%2Fttcareers.taleo.net%2Fcareersection%2Fcareersection%2Fcandidateportal%2Fmyaccount%2FmyAccountView.jsf%3Flang%3Den%26csNo%3D10123%26portal%3D14400017243&TARGET=https%3A%2F%2Fttcareers.taleo.net%2Fcareersection%2Fcareersection%2Fcandidateportal%2Fmyaccount%2FmyAccountView.jsf%3Flang%3Den%26csNo%3D10123%26portal%3D14400017243");
+		Thread.sleep(300);
+		driver.findElement(By.id("dialogTemplate-dialogForm-login-name1")).sendKeys("SaitejaPoosa");
+		Thread.sleep(300);
+		driver.findElement(By.id("dialogTemplate-dialogForm-login-password")).sendKeys("Saiteja@1731");
+		Thread.sleep(3000);
+		driver.findElement(By.id("dialogTemplate-dialogForm-login-defaultCmd")).click();
+		Thread.sleep(300);
+		driver.get("https://ttcareers.taleo.net/careersection/careersection/candidateportal/myaccount/myAccountView.jsf?lang=en&csNo=10123&portal=14400017243");
+		Thread.sleep(300);
+		driver.findElement(By.id("et-ef-content-myAccountViewContent-flowHeader-myJobPageTabAction")).click();
+		Thread.sleep(300);
+		driver.findElement(By.id("mySubmissionsInterface.SpecificApplicationTitle.row1")).click();
+		Thread.sleep(300);
+		driver.findElement(By.id("requisitionDescriptionPrintableInterface.backAction")).click();
+		Thread.sleep(300);
+		driver.findElement(By.id("mySubmissionsInterface.ID905.row2")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("topNavInterface.logoutAction")).click();
+		Thread.sleep(3000);
+		driver.quit();
+		}
